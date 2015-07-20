@@ -1,0 +1,33 @@
+<template name="ldapLoginButtonsIonic">
+  {{#unless currentUser}}
+    <div class="list">
+      {{#with title}}
+        <div class="item item-divider">
+          <h3 class="title">
+            {{this}}
+          </h3>
+        </div>
+      {{/with}}
+      <div class="accounts-ldap-dialog">
+        <form role="form" novalidate="" action="#" method="POST">
+          <div class="item item-input item-text-wrap item-stacked-label">
+            <label class="input-label" for="at-field-email"> Username or email </label>
+            <input id="at-field-email" type="email" name="ldap" placeholder="Email" autocapitalize="none" autocorrect="off">
+          </div>
+          <div class="item item-input item-text-wrap item-stacked-label">
+            <label class="input-label" for="at-field-password"> Password </label>
+            <input id="at-field-password" type="password" name="password" placeholder="Password" autocapitalize="none" autocorrect="off">
+          </div>
+          {{#if failedLogin}}
+            <div class="item message error-message">
+              Invalid sign in details
+            </div>
+          {{/if}}
+          <div class="padding">
+            <button id="login-buttons-password" class="button button-positive button-block submit" type="submit"> Sign In </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  {{/unless}}
+</template>
