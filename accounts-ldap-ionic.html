@@ -18,10 +18,14 @@
             <label class="input-label" for="at-field-password"> Password </label>
             <input id="at-field-password" type="password" name="password" placeholder="Password" autocapitalize="none" autocorrect="off">
           </div>
-          {{#if failedLogin}}
-            <div class="item message error-message">
-              Invalid sign in details
-            </div>
+          {{#if loggingIn}}
+            {{> spinner}}
+          {{else}}
+            {{#if failedLogin}}
+              <div class="item message error-message">
+                Invalid sign in details
+              </div>
+            {{/if}}
           {{/if}}
           <div class="padding">
             <button id="login-buttons-password" class="button button-positive button-block submit" type="submit"> Sign In </button>
