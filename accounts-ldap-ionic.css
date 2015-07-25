@@ -1,3 +1,8 @@
 .accounts-ldap-dialog .error-message {
   color: red;	
 }
+
+/* Ionic sets this as 35% and that's not enough */
+.input-label {
+  width: 50% !important;	
+}
