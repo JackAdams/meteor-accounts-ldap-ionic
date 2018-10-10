@@ -8,16 +8,11 @@ Template.ldapLoginButtonsIonic.helpers(_.extend(LDAP.formHelpers, {
   },
   loggingIn : function () {
 	return Meteor.loggingIn();
+  },
+  extraFormFields: function () {
+	return LDAP.extraFormFields.get();  
   }
 }));
-
-Template.ldapLoginButtonsIonic.events({
-  'submit form' : function (evt) {
-	// Because this is a form elememt, whereas the original "form" wasn't
-	// we need to prevent the default behaviour of submitting the form
-    evt.preventDefault();
-  }
-});
 
 Template.ldapLoginButtonsIonic.events(LDAP.formEvents);
 

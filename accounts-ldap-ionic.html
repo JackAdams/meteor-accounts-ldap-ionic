@@ -18,12 +18,18 @@
             <label class="input-label" for="at-field-password"> Password </label>
             <input id="at-field-password" type="password" name="password" placeholder="Password" autocapitalize="none" autocorrect="off">
           </div>
+          {{#each extraFormFields}}          
+            <div class="item item-input item-text-wrap item-stacked-label">
+              <label class="input-label" for="at-field-password"> {{name}} </label>
+              <input id="at-field-{{field}}" class="login-extra-field" type="text" name="{{field}}" placeholder="{{name}}" autocapitalize="none" autocorrect="off">
+            </div>
+          {{/each}}
           {{#if loggingIn}}
             {{> spinner}}
           {{else}}
             {{#if failedLogin}}
               <div class="item message error-message">
-                Invalid sign in details
+                {{errorMessage}}
               </div>
             {{/if}}
           {{/if}}
