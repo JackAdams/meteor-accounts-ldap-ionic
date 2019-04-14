@@ -1,6 +1,6 @@
 Package.describe({
   name: 'babrahams:accounts-ldap-ionic',
-  version: '0.5.1',
+  version: '0.5.2',
   summary: 'Gives babrahams:accounts-ldap package a form in the Ionic style',
   git: 'https://github.com/JackAdams/meteor-accounts-ldap-ionic',
   documentation: 'README.md'
@@ -9,7 +9,7 @@ Package.describe({
 Package.onUse(function (api) {
   api.versionsFrom('1.1.0.2');
   api.use(['templating', 'underscore', 'less@2.7.8', 'sacha:spin@2.3.1'], 'client');
-  api.use('babrahams:accounts-ldap@0.8.1');
+  api.use('babrahams:accounts-ldap@0.8.2');
   api.addFiles('accounts-ldap-ionic.css', 'client');
   api.addFiles('accounts-ldap-ionic.html', 'client');
   api.addFiles('accounts-ldap-ionic.js', 'client');
