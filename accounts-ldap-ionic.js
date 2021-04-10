@@ -4,13 +4,13 @@
 
 Template.ldapLoginButtonsIonic.helpers(_.extend(LDAP.formHelpers, {
   title : function () {
-	return (this.title === undefined) ? 'Sign In' : this.title;  
+	  return (this.title === undefined) ? 'Sign In' : this.title;  
   },
   loggingIn : function () {
-	return Meteor.loggingIn();
+	  return Meteor.loggingIn();
   },
   extraFormFields: function () {
-	return LDAP.extraFormFields.get();  
+	  return LDAP.extraFormFields.get();  
   }
 }));
 

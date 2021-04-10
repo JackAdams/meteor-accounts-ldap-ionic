@@ -18,6 +18,12 @@
             <label class="input-label" for="at-field-password"> Password </label>
             <input id="at-field-password" type="password" name="password" placeholder="Password" autocapitalize="none" autocorrect="off">
           </div>
+          {{#if forgotPasswordLink}}
+            <div>
+              <label class="input-label" for="at-field-forgot-password"></label>
+              <a id="login-forgot-passwork-link" href="#"><small>Forgot password?</small></a>
+            </div>
+          {{/if}}
           {{#each extraFormFields}}          
             <div class="item item-input item-text-wrap item-stacked-label">
               <label class="input-label" for="at-field-password"> {{name}} </label>
