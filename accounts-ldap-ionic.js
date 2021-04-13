@@ -10,7 +10,7 @@ Template.ldapLoginButtonsIonic.helpers(_.extend(LDAP.formHelpers, {
 	  return Meteor.loggingIn();
   },
   extraFormFields: function () {
-	  return LDAP.extraFormFields.get();  
+    return LDAP.extraFormFields.get();  
   }
 }));
 
