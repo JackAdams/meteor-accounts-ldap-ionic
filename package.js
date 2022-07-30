@@ -1,6 +1,6 @@
 Package.describe({
   name: 'babrahams:accounts-ldap-ionic',
-  version: '0.5.10',
+  version: '0.5.11',
   summary: 'Gives babrahams:accounts-ldap package a form in the Ionic style',
   git: 'https://github.com/JackAdams/meteor-accounts-ldap-ionic',
   documentation: 'README.md'
